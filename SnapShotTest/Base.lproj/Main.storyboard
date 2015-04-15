@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Ya-wA-BGU">
+                                <rect key="frame" x="224" y="189" width="152" height="221"/>
+                                <color key="backgroundColor" red="0.99215692280000001" green="0.0078431377190000002" blue="0.35686275360000003" alpha="1" colorSpace="deviceRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="152" id="jri-Va-rjY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FaA-U3-GHE">
+                                <rect key="frame" x="16" y="28" width="138" height="30"/>
+                                <state key="normal" title="Old Snapshot"/>
+                                <connections>
+                                    <action selector="onOldSnapShot:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VUh-Mg-ujq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aqY-c8-q1g">
+                                <rect key="frame" x="442" y="28" width="142" height="30"/>
+                                <state key="normal" title="New Snapshot YES"/>
+                                <connections>
+                                    <action selector="onNewSnapShot:" destination="BYZ-38-t0r" eventType="touchUpInside" id="W2Q-sc-vxQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sHE-Um-a1E">
+                                <rect key="frame" x="292" y="28" width="142" height="30"/>
+                                <state key="normal" title="New Snapshot NO"/>
+                                <connections>
+                                    <action selector="newSnapNO:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Uel-Ak-UR9"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="aqY-c8-q1g" firstAttribute="leading" secondItem="sHE-Um-a1E" secondAttribute="trailing" constant="8" symbolic="YES" id="1rq-cl-ZMG"/>
+                            <constraint firstItem="aqY-c8-q1g" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="8Bh-Nm-vjL"/>
+                            <constraint firstItem="8Ya-wA-BGU" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="169" id="DfR-nZ-Vqt"/>
+                            <constraint firstItem="aqY-c8-q1g" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="LUW-sQ-g1f"/>
+                            <constraint firstItem="sHE-Um-a1E" firstAttribute="baseline" secondItem="aqY-c8-q1g" secondAttribute="baseline" id="cYB-PG-6TB"/>
+                            <constraint firstItem="aqY-c8-q1g" firstAttribute="baseline" secondItem="FaA-U3-GHE" secondAttribute="baseline" id="fg4-RT-8r1"/>
+                            <constraint firstItem="8Ya-wA-BGU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oPB-Ol-tJS"/>
+                            <constraint firstItem="FaA-U3-GHE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="qva-p4-Z7F"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="8Ya-wA-BGU" secondAttribute="bottom" constant="190" id="sFx-8a-TIC"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="label" destination="8Ya-wA-BGU" id="oAX-qL-Xqx"/>
+                        <outlet property="oldBtn" destination="FaA-U3-GHE" id="2aa-Xp-Smy"/>
+                        <outlet property="snapShotBtn" destination="FaA-U3-GHE" id="x05-Gr-KEU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
